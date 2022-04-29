@@ -79,8 +79,7 @@ class MongoDB extends Base_1.Base {
                 this.schema.findOneAndUpdate({ Key: arr[0] }, { $set: { Value: newData } });
                 return true;
             }
-            this.schema.deleteOne({ Key: arr[0] });
-            return true;
+            return this.schema.deleteOne({ Key: arr[0] });
         });
     }
     add(key, count) {
